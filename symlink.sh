@@ -1,9 +1,11 @@
 #!/bin/bash
 current=$(pwd)
-for f in .*;
+#Iterate through all files in the current directory
+for f in .[A-Za-z]*;
 do
-	echo $f
-	ln -s $current/$f  /home/tanvijivtode
+	#Perform the creation of a symlink, and add it to the home directory
+	#Because ln accounts for files that already exist, there will be no repeats
+	ln -s $current/$f  /home/tanvijivtode 
 done
 
 	

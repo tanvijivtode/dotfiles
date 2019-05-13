@@ -164,28 +164,51 @@ if has("cscope")
 
 endif
 
-ab #i #include <iostream>
-ab #t #include <cassert>
-ab #m #include <cmath>
-ab #a #include <algorithm>
-ab #u #include <utility>
-ab #r #include <random>
-ab #s #include <string>
-ab #v #include <vector>
-ab uns using namespace std;
+
+" Vim plugin configurations (using vim-plug) 
+call plug#begin('~/.vim/plugged')
+
+" Declare the list of plugins
+Plug 'vim-airline/vim-airline'
+
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+
+Plug 'scrooloose/nerdtree'
+
+Plug 'airblade/vim-gitgutter'
+
+" Plugins become visible to Vim after this call
+call plug#end()
+
+
+" Creates abbreviations for C++ includes 
+ ab #i #include <iostream>
+ ab #t #include <cassert>
+ ab #m #include <cmath>
+ ab #a #include <algorithm>
+ ab #u #include <utility>
+ ab #r #include <random>
+ ab #s #include <string>
+ ab #v #include <vector>
+ ab uns using namespace std;
+
+
+" Other settings 
+map <C-n> :NERDTreeToggle<CR>
 
 set autoindent
 set smartindent
 set clipboard=unnamed
+set number
 
 execute pathogen#infect()
 syntax on
-filetype plugin indent on
-set number
+filetype indent on
+filetype plugin on
+filetype on
 
-call plug#begin('~/.vim/plugged')
 
-Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-fugitive'
 
-call plug#end()
+
+

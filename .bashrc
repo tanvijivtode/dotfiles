@@ -116,5 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# aliases for commonly employed directories
 alias documents="cd /mnt/c/Users/Tanvi/Documents/"
 alias downloads="cd /mnt/c/Users/Tanvi/Downloads/"
+
