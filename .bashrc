@@ -119,4 +119,10 @@ fi
 # aliases for commonly employed directories
 alias documents="cd /mnt/c/Users/Tanvi/Documents/"
 alias downloads="cd /mnt/c/Users/Tanvi/Downloads/"
+alias angular="cd /mnt/c/Users/Tanvi/Documents/Angular-GettingStarted/APM-Start/src/app"
 
+#function created to create a directory and move to it in one command
+mkcd () {
+	mkdir "$1"
+	cd "$1"
+		}
