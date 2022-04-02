@@ -62,7 +62,7 @@ else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
-
+force_color_prompt=yes
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
@@ -118,9 +118,10 @@ fi
 
 # aliases for commonly employed directories
 alias documents="cd /mnt/c/Users/Tanvi/Documents/"
+alias caen="ssh tjivtode@oncampus-course.engin.umich.edu"
+alias caen2="ssh tjivtode@login-course.engin.umich.edu"
 alias downloads="cd /mnt/c/Users/Tanvi/Downloads/"
-alias angular="cd /mnt/c/Users/Tanvi/Documents/Angular-GettingStarted/APM-Start/src/app"
-
+alias sr="source ~/.bashrc"
 #function created to create a directory and move to it in one command
 mkcd () {
 	mkdir "$1"

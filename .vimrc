@@ -54,7 +54,7 @@ set softtabstop=0
 set shiftwidth=2
 set expandtab
 
-execute pathogen#infect()
+" execute pathogen#infect()
 syntax enable
 colorscheme default
 filetype indent on
